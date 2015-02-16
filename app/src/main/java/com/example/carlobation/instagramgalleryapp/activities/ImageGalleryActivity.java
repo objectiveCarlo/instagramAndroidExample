@@ -2,6 +2,7 @@ package com.example.carlobation.instagramgalleryapp.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 
 import com.example.carlobation.instagramgalleryapp.fragments.ImageGalleryFragment;
@@ -9,7 +10,7 @@ import com.example.carlobation.instagramgalleryapp.fragments.ImageGalleryFragmen
 /**
  * Created by carlobation on 2/16/15.
  */
-public class ImageGalleryActivity extends ActionBarActivity {
+public class ImageGalleryActivity extends FragmentActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
