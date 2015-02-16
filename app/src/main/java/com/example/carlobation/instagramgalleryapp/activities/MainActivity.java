@@ -1,5 +1,6 @@
 package com.example.carlobation.instagramgalleryapp.activities;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -38,9 +39,19 @@ public class MainActivity extends ActionBarActivity {
                 mApp.authorize();
             }
         });
+
+        if (mApp.hasAccessToken()) {
+
+            launchGalleryActivity();
+        }
     }
 
+    private void launchGalleryActivity() {
 
+        Intent intent =  new Intent(MainActivity.this, ImageGalleryActivity.class);
+        startActivity(intent);
+
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -68,6 +79,9 @@ public class MainActivity extends ActionBarActivity {
         public void onSuccess() {
 
             Toast.makeText(MainActivity.this, mApp.getUserName(), Toast.LENGTH_LONG).show();
+
+            launchGalleryActivity();
+
 
         }
 
