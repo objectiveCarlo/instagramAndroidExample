@@ -14,6 +14,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
+import com.example.carlobation.instagramgalleryapp.Constants;
 import com.example.carlobation.instagramgalleryapp.R;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -28,7 +29,7 @@ public class ImageGalleryFragment extends Fragment {
 
     private DisplayImageOptions options;
 
-    String[] imageUrls =  new String[]{};
+    String[] imageUrls = Constants.IMAGES;
 
     protected AbsListView listView;
 
